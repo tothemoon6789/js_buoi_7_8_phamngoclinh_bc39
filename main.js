@@ -148,8 +148,13 @@ const section = {
             for (let i = 0; i < myarray.length; i++) {
                 const element = myarray[i];
                 if (element > 1) {
+                    console.log(element);
                     let signal = true;
                     if (soNguyenTo !== -1) break;
+                    if (element === 2) {
+                        soNguyenTo = 2;
+                        break
+                    }
                     for (let j = 2; j < element; j++) {
                         if (element % j === 0) signal = false;
                         if (j === element - 1 && signal === true) soNguyenTo = element;
